@@ -42,9 +42,9 @@
   border: none;
   padding: 5px 10px;
   cursor: pointer;
-  /* outline: none; */
+  
   margin-left: 10px;
-  /* border: 1px solid black; */
+  
 }
 .remove-favorite-movie:hover {
   background-color: #990000;
