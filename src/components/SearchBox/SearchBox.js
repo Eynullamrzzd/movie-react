@@ -13,8 +13,10 @@ class SearchBox extends Component {
   searchBoxSubmitHandler = (e) => {
     e.preventDefault();
     const {searchLine} = this.state;
+    const trimmedSearchLine = searchLine.trim();
+
     if (searchLine.trim() !== "") {
-    this.props.dispatch(fetchMovies(searchLine));
+    this.props.dispatch(fetchMovies(trimmedSearchLine));
     }
   };
   render() {
