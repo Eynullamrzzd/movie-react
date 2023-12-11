@@ -12,7 +12,10 @@ class SearchBox extends Component {
   };
   searchBoxSubmitHandler = (e) => {
     e.preventDefault();
-    this.props.dispatch(fetchMovies(this.state.searchLine));
+    const {searchLine} = this.state;
+    if (searchLine.trim() !== "") {
+    this.props.dispatch(fetchMovies(searchLine));
+    }
   };
   render() {
     const { searchLine } = this.state;
@@ -36,7 +39,7 @@ class SearchBox extends Component {
           <button
             type="submit"
             className="search-box__form-submit"
-            disabled={!searchLine}
+            disabled={!searchLine.trim() === ""}
           >
             Search
           </button>
