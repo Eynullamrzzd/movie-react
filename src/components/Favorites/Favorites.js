@@ -53,7 +53,7 @@ class Favorites extends Component {
                   onClick={() =>
                     this.props.removeMovieFromFavoriteList(item.imdbID)
                   }
-                  style={{display: isSbm ? "none" : "inline-block"}}
+                  // style={{display: isSbm ? "none" : "inline-block"}}
                 >
                   X
                 </button>
